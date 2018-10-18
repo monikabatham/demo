@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nowigence</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/icons.min.css">
+        <link rel="shortcut icon" href="images/Insight-Logo.png">
+         <link rel="stylesheet" href="bootstrap/bootstrap.css">
+         <script src="bootstrap/jquery-2.2.3.min.js"></script>
+         <script src="bootstrap/bootstrap.min.js"></script>  
+         <script src="bootstrap/angular.min.js"></script>
+         <link rel="stylesheet" href="style.css">
+
+<style>
+@font-face {
+    font-family: ptSans;
+   
+    src: url(fonts/PT_Sans-Web-Regular.ttf);
+}
+body
+{
+  background-color: rgb(245,255,245);
+    margin: 0;
+    font-family: ptSans;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+   padding-bottom: 60px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.table{
+
+   margin: 27px 0 0 11px;
+    font-family: ptSans;
+}
+  
+.table>tbody>tr>td
+{
+  border-top: none;
+  font-size: 15px;
+
+}
+a {
+    color: #ffffff;
+    
+}
+.well
+{
+background-color:#FFFFFF;
+color:black;
+}
+
+
+/* Tab Navigation */
+.nav-tabs {
+    margin: 0;
+    padding: 0;
+    border: 0;    
+}
+.nav-tabs > li > a {
+    background: rgb(220,220,220);
+    border-radius: 1;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover {
+    background:#fff ;
+ 
+}
+/* Tab Content */
+.tab-pane {
+    background: #fff;
+    border-radius: 0;
+    text-align: center;
+   padding: 10px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  border: 1px solid #40865f;
+}
+
+.table  td a
+{
+color:rgb(192,192,192);
+font-size:20px;
+    margin-left: -67px;
+}
+
+
+.menuT tr:hover{
+  color: #FFFFFF;
+  font-family: ptSans;
+}
+
+.menuT tr td a:hover, .menuT tr td a:focus{
+  color:#fff ;
+}
+
+.navbar-custom 
+{
+    background-color: #fff;
+    margin: 0 -223px 19px -71px;
+    
+}
+
+.app-search {overflow: hidden;}
+
+.app-search form {
+    max-width: 30%;
+   margin-top: 14px;
+
+}
+.app-search .form-control {
+    border: none;
+    height: 38px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f1f3fa;
+}
+.app-search i.fa-search {
+    position: absolute;
+    z-index: 10;
+    font-size: 20px;
+    line-height: 38px;
+    right: 10px;
+    border-left: 1px solid #ddd;
+    padding-left: 6px;
+}
+
+.app-search .app-para{
+    letter-spacing: 0.5px;
+    font-size: 12px;
+}
+
+.app-para p{
+    margin: 0 81px;}
+
+.app-search .input-group.form-srch{
+       margin-left: 11px;
+    display: flex;
+    border: 1px solid #ddd;
+    width: 236PX;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+.slider.round {
+  border-radius: 40px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #2196F3;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;}
+
+  .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #40865F;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+  .drop{
+    height: 38px;
+    width: 199px;
+
+  }
+
+  .main
+  {
+    margin-left: 202px;
+   
+  }
+</style>
+
+</head>
+<body>
+  <div class="container">
+    <div class="col-md-2" style="background:#40865F;position:fixed;left:0;bottom:0;top:0; width:250px">
+      <img src="images/logo.png" alt="" height="50" style="margin-top:10px;    margin-left: 15px;">
+      
+      
+      <table class="table menuT ">
+      <tr>
+      <td> <h5 class="first">NAVIGATION</h5></td>
+    </tr>
+        <tr>
+          <td>
+            <span class="glyphicon glyphicon-dashboard" style="margin-top:8px;">
+            </span>
+          </td>
+          <td>
+            <a href="">
+             Dashboard
+            </a>
+          </td>
+        </tr>
+             
+        <tr>
+          
+          <td>
+            <span class="glyphicon glyphicon-home" style="margin-top:8px;">
+            </span>
+          </td>
+          <td>
+            <a href="">
+             Home
+            </a>
+          </td>
+        </tr>
+                      
+        <tr>
+          
+          <td>
+            <span class="glyphicon glyphicon-modal-window" style="margin-top:8px;"></span>
+            
+          </td>
+          <td>
+            <a href="">
+            News
+            </a>
+          </td>
+        </tr>
+      </table><br>
+   </div>
+
+      <div class="col-md-10 main">
+        <div class="navbar-custom">
+
+          <div class="app-search">
+             <div class="col-md-3">
+            <form>
+              <div class="input-group form-srch">
+                <input type="text" class="form-control" placeholder="Search...">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </div>
+              <div class="app-para">
+                <p>Advanced&nbsp;search</p>
+              </div>
+
+            </form>
+          </div>
+          <div class="col-md-5"> 
+
+      <div class="custom-select" style="margin-top: 20px;">
+            <label class="switch">
+              <input type="checkbox" checked>
+               <span class="slider round"></span>
+            </label>
+
+          <select class="drop">
+        <option value="0">Select News:</option>
+        <option value="1">Audi</option>
+          <option value="2">BMW</option>
+        <option value="3">Citroen</option>
+    
+      </select>
+
+    <a href="javascript: void(0);"class="btn" style="background-color:#40865f;hover:#4086bf; padding: 8px 13px;margin-top: -7px;" >
+                  <i class="glyphicon glyphicon-filter" style="background-color:#40865f;">
+                  </i>
+                  </a>
+                  <a href="javascript: void(0);" class="btn" style="background-color:#40865f;padding: 8px 13px; ">
+                  <i class="glyphicon glyphicon-repeat"></i>
+                  </a>
+                </div>
+              </div>
+                  
+          <div class="col-md-2 " style="margin: 11px 0px 0 165px;">
+              
+                <i class="glyphicon glyphicon-bell" style="font-size: 30px;top: 14px;"></i>
+              
+              
+                <img src="images/Insight-Logo.png" alt="Nowigence Logo" style="height: 33px;">
+              
+          </div>
+        </div>
+      </div>
+    
+
+                
+                
+            
+                    <!-- end Topbar -->
+    
+        <div class="row">
+          <div class="col-md-2">
+            <div class="well">
+              <i class="fa fa-user-plus pull-right" style="font-size: 15px;"></i>
+                  <h5 class="text-muted font-weight-normal mt-0" title="Number of Customers">Customers</h5> 
+                  <h3>36,254</h3>
+                  <p class="text-muted">
+                  <span class="text-danger"><i class="glyphicon glyphicon-arrow-down"></i> 5.27%</span><br>
+                  <span class="text-nowrap">Since last month</span>  
+                 </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="well">
+                  <i class="fa fa-crosshairs pull-right" style="font-size:15px;"></i>
+                <h5 class="text-muted font-weight-normal " title="competitors">Competitors</h5>
+                <h3 >5,543</h3>
+                <p class="text-muted">
+                 <span class="text-success"><i class="glyphicon glyphicon-arrow-up"></i> 1.08%</span><br>
+                 <span class="text-nowrap">Since last month</span>
+                </p> 
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="well">
+                  <i class="fa fa-bus pull-right" style="font-size: 15px;"></i>
+                <h5 class="text-muted font-weight-normal " title="supplier">Suppliers</h5>
+                <h3>$6,254</h3>
+                <p class="text-muted">
+                  <span class="text-danger "><i class="glyphicon glyphicon-arrow-down"></i> 7.00%</span><br>
+                  <span class="text-nowrap">Since last month</span>
+                </p> 
+             </div>
+          </div>
+          <div class="col-md-2">
+            <div class="well">
+                 <i class="fa fa-user pull-right" style="font-size: 15px;"></i>
+                <h5 class="text-muted font-weight-normal " title="self">Self</h5>
+                <h3>+ 30.56%</h3>
+                <p class="text-muted">
+                  <span class="text-danger "><i class="glyphicon glyphicon-arrow-down"></i> 4.87%</span><br>
+                  <span class="text-nowrap">Since last month</span>
+                </p> 
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="well" style="height:147px">
+              <h5 class="text-muted">Message Board</h5>
+            </div>
+          </div>
+      </div>
+
+     <div class="row">
+        <div class="col-md-8">
+           <div class="well">
+            <p>Text</p> 
+            <p>Text</p> 
+            <p>Text</p> 
+           </div>
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="">
+                  <a href="#home" role="tab" data-toggle="tab">Home</a>
+                </li>
+                <li>
+                  <a href="#profile" role="tab" data-toggle="tab"> Profile</a>
+                </li>
+                <li>
+                  <a href="#messages" role="tab"data-toggle="tab">Messages</a>
+                </li>
+              </ul>
+    
+      <!-- Tab panes -->
+    <div class="tab-content well">
+      <div class="tab-pane fade active in" id="home">
+          <h2>Home Content Goes Here</h2>
+          <img src="" alt="Cats"/>
+      </div>
+      <div class="tab-pane fade " id="profile">
+          <h2>Profile Content Goes Here</h2>
+          <img src="" alt="Cats"/>
+      </div>
+      <div class="tab-pane fade " id="messages">
+          <h2 class="well">Messages Content Goes </h2>
+          <img src="" alt="Cats"/>
+      </div>
+
+    </div>
+  </div>
+          
+    <div class="col-md-4">
+      <div class="well">
+        <p>Text</p> 
+        <p>Text</p> 
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p>
+        <p>Text</p> 
+      </div>
+    </div>
+  </div>
+
+     <div class="row" style="margin-top:20px;">
+        <div class="col-md-6">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+    </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <p>Text</p> 
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+            <p>Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
